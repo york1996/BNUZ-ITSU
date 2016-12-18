@@ -1,0 +1,94 @@
+<include file="Public/home/header.html" title="科技学时/服务时长查询 - 北京师范大学珠海分校信息技术学院学生会"/>
+<include file="Public/home/menu.html" />
+<div class="container-fluid">
+<div class="row">
+    <div class="jumbotron">
+        <div class="container">
+            <h1 style="display: inline">科技学时/服务时长<small></small></h1>
+        </div>
+    </div>
+</div>
+    </div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">查询</h3>
+                </div>
+                <div class="panel-body">
+                    <form action="{:U('Check/check')}">
+                        <div class="form-group">
+                            <label class="sr-only">学号</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">学号</div>
+                                <input type="text" class="form-control" name="id"  placeholder="请输入你要查询的学号">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">查询</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4"><div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">科技学时-{$id}-{$name.name}</h3>
+            </div>
+            <div class="panel-body">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th width="80%">项目</th>
+                        <th>学时</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <volist name="tcinfo" id="vo" empty="暂时没有数据">
+                        <tr>
+                            <td width="80%">{$vo.title}</td>
+                            <td>{$vo.score}</td>
+                        </tr>
+                    </volist>
+                    <tr>
+                        <td width="80%">总学时:</td>
+                        <td>{$score}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div></div>
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">服务时长-{$id}-{$name.name}</h3>
+                </div>
+                <div class="panel-body">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th width="80%">项目</th>
+                            <th>学时</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <volist name="tccinfo" id="vo" empty="暂时没有数据">
+                            <tr>
+                                <td width="80%">{$vo.title}</td>
+                                <td>{$vo.score}</td>
+                            </tr>
+                        </volist>
+                        <tr>
+                            <td width="80%">总时长:</td>
+                            <td>{$tccscore}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<include file="Public/home/footer.html" />

@@ -1,0 +1,66 @@
+<nav class="navbar navbar-default" style="margin-bottom: 0;">
+    <div class="container">
+
+        <!--Brand标记区域始-->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{:U('Index/Index')}">ITSU</a>
+        </div>
+        <!--Brand标记区域终-->
+
+        <!--普通按钮区域始-->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="{:U('Index/Index')}">主页 <span class="sr-only">(current)</span></a></li>
+
+                <!--下拉菜单-->
+                <li class="dropdown" id="section">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">栏目 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{:U('Article/classify')}">新闻动态</a></li>
+                        <!--<li><a href="#news">专题活动</a></li>-->
+                        <li role="separator" class="divider"></li>
+                        <li class="dropdown-submenu"><a tabindex="-1" href="#">学生组织</a>
+                            <ul class="dropdown-menu">
+                                <li><a tabindex="-1" href="#">信院团委</a></li>
+                                <li><a tabindex="-1" href="#">信院学生党支部</a></li>
+                                <li><a tabindex="-1" href="#">信院学生社团</a></li>
+                            </ul>
+                        </li>
+                        <li id="intro"><a href="#intro">院会概况</a></li>
+                    </ul>
+                </li>
+                <!--/下拉菜单-->
+
+                <!--<li id="vote"><a href="{:U('Vote/Index')}">投票</a></li>-->
+                <li id="apply"><a href="{:U('Activity/Index')}">活动报名</a></li>
+            </ul>
+            <!--普通按钮区域终-->
+
+            <!--右侧下拉菜单终-->
+            <if condition="$_SESSION['name']">
+                <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{$_SESSION['name']}  <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="{:U('User/index')}">个人中心</a></li>
+                    <li><a href="{:U('Index/logout')}">注销</a></li>
+                </ul>
+                </li>
+                    </ul>
+                <else />
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="{:U('Index/login')}">登录</a>
+                    </li>
+                </ul>
+            </if>
+        </div>
+    </div>
+</nav>
+<!--导航栏终-->

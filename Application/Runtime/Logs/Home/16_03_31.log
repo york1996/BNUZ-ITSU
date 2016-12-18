@@ -1,0 +1,55 @@
+[ 2016-03-31T12:48:25+08:00 ] ::1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000924s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001212s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001324s ]
+SQL: SHOW COLUMNS FROM `it_article` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `it_article` WHERE ( classify=1 ) ORDER BY create_time desc LIMIT 6   [ RunTime:0.0050s ]
+SQL: SELECT * FROM `it_article` WHERE ( classify=2 ) ORDER BY create_time desc LIMIT 6   [ RunTime:0.0015s ]
+SQL: SELECT * FROM `it_article` WHERE ( classify=3 ) ORDER BY create_time desc LIMIT 6   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `it_article` WHERE ( classify=4 ) ORDER BY create_time desc LIMIT 6   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `it_article` WHERE ( classify=5 ) ORDER BY create_time desc LIMIT 6   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `it_article` WHERE ( classify=6 ) ORDER BY create_time desc LIMIT 6   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000406s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000576s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032521s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032618s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000516s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000582s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001066s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001154s ]
+
+[ 2016-03-31T13:08:40+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001008s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000752s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000838s ]
+SQL: SHOW COLUMNS FROM `it_article` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `it_article` WHERE ( classify=1 ) ORDER BY create_time desc LIMIT 6   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `it_article` WHERE ( classify=2 ) ORDER BY create_time desc LIMIT 6   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `it_article` WHERE ( classify=3 ) ORDER BY create_time desc LIMIT 6   [ RunTime:0.0037s ]
+SQL: SELECT * FROM `it_article` WHERE ( classify=4 ) ORDER BY create_time desc LIMIT 6   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `it_article` WHERE ( classify=5 ) ORDER BY create_time desc LIMIT 6   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `it_article` WHERE ( classify=6 ) ORDER BY create_time desc LIMIT 6   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000251s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000394s ]
+NOTIC: [8] Undefined index: name /Applications/MAMP/htdocs/xsh/Application/Runtime/Cache/Home/5f5878b563bbd0551b6c84d71156b7e9.php 第 52 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038801s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038878s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000166s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000213s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000646s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000735s ]
+

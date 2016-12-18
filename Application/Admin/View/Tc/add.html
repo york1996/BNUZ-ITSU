@@ -1,0 +1,28 @@
+<include file="Public/header.html" title="学时管理 - 北京师范大学珠海分校信息技术学院学生会"/>
+<include file="Public/adminmenu.html" />
+<div class="am-cf am-padding">
+    <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">新增学时项目</strong> / <small>在这里可以新增学时项目</small></div>
+</div>
+
+<div class="am-container">
+    <form class="form-horizontal" method="post" action="__URL__/add" enctype="multipart/form-data">
+        <div class="am-form-group">
+            <label for="title">项目</label>
+            <div>
+                <input type="text" class="form-control" id="title" name="title" placeholder="标题">
+            </div>
+        </div>
+        <div class="am-form-group">
+            <label for="time">时间</label>
+            <div>
+                <input type="text" class="form-control" id="time" name="time" placeholder="时间">
+            </div>
+        </div>
+        <div class="am-form-group">
+            <div>
+                <button type="submit" class="am-btn-primary">增加</button>
+            </div>
+        </div>
+    </form>
+</div>
+<include file="Public/footer.html" />

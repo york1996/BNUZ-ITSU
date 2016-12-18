@@ -1,0 +1,43 @@
+<include file="Public/header.html" title="投票管理 - 北京师范大学珠海分校信息技术学院学生会"/>
+<include file="Public/adminmenu.html" />
+<div class="am-cf am-padding">
+    <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">新增投票项</strong> / <small>在这里管理投票项</small></div>
+</div>
+
+<div class="am-container">
+
+    <form class="am-form" method="post" action="__URL__/addlabelinfo" enctype="multipart/form-data">
+        <INPUT type="hidden" name="id" value="{$voo.id}">
+        <div class="am-form-group">
+            <label for="title">选项名</label>
+            <div>
+                <input type="text" class="form-control" id="title" name="selectname" placeholder="选项名">
+            </div>
+        </div>
+        <div class="am-form-group">
+            <div>
+                <button type="submit" class="am-btn-default">增加投票项</button>
+            </div>
+        </div>
+    </form>
+
+    <table class="table table-hover table-striped">
+        <thead>
+        <tr>
+            <th width="40%">投票选项</th>
+            <th>票数</th>
+            <th>管理</th>
+        </tr>
+        </thead>
+        <tbody>
+        <volist name="list" id="vo">
+            <tr>
+                <td width="40%">{$vo.selectname}</td>
+                <td>{$vo.countvotes}</td>
+                <td><a href="__URL__/dellabel/id/{$vo.selectname}">删除</a></td>
+            </tr>
+        </volist>
+        </tbody>
+    </table>
+</div>
+<include file="Public/footer.html" />

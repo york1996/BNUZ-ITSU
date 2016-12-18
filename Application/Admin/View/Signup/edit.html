@@ -1,0 +1,55 @@
+<include file="Public/header.html" title="新增报名项目 - 北京师范大学珠海分校信息技术学院学生会"/>
+<include file="Public/adminmenu.html" />
+<div class="am-cf am-padding">
+    <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">编辑报名</strong> / <small>编辑报名项目</small></div>
+</div>
+
+<div class="am-container">
+    <form class="am-form" method="post" action="__URL__/edit" enctype="multipart/form-data">
+        <div class="am-form-group">
+            <label for="title">标题</label>
+            <div>
+                <input type="text" id="title" name="title" value="{$vo.title}" placeholder="标题">
+            </div>
+        </div>
+        <input type="hidden" name="id" value="{$vo.id}">
+        <div class="am-form-group">
+            <label for="title">举办部门</label>
+            <div>
+                <input type="text" id="title" name="writer" value="{$vo.writer}" placeholder="部门">
+            </div>
+        </div>
+        <div class="am-form-group">
+            <label for="time">报名截止时间</label>
+            <div>
+                <input type="text" id="time" name="time" value="{$vo.time|date='Y-m-d',###}" placeholder="时间"  class="am-form-field" data-am-datepicker readonly required />
+            </div>
+        </div>
+        <div class="am-form-group">
+            <label for="container">说明</label>
+            <div>
+                <script id="container" name="content" type="text/plain">
+                    {$vo.content|htmlspecialchars_decode|stripslashes}
+                </script>
+            </div>
+        </div>
+
+        <div class="am-form-group">
+            <di>
+                <button type="submit" class="am-btn-default">修改</button>
+            </di>
+        </div>
+    </form>
+</div>
+
+<js href="__PUBLIC__/js/jquery-2.0.2.js" />
+<js href="__PUBLIC__/ueditor/ueditor.config.js" />
+<js href="__PUBLIC__/ueditor/ueditor.all.js" />
+<script>
+    $(function(){
+        var ue = UE.getEditor('container',{
+                    serverUrl :'{:U('Admin/Article/ueditor')}'
+    });
+    })
+</script>
+<include file="Public/footer.html" />

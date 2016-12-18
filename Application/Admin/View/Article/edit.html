@@ -1,0 +1,60 @@
+<include file="Public/header.html" title="文章发布 - 北京师范大学珠海分校信息技术学院学生会"/>
+<include file="Public/adminmenu.html" />
+<div class="am-cf am-padding">
+    <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">文章修改</strong> / <small>修改网站已有文章</small></div>
+</div>
+<hr>
+
+<div class="am-container">
+    <form class="am-form" method="post" action="__URL__/update" enctype="multipart/form-data">
+        <INPUT type="hidden" name="id" value="{$vo.id}">
+        <div class="am-form-group">
+            <label>标题:</label>
+            <textarea class="am-form-control" rows="1" name="title">{$vo.title}</textarea>
+        </div>
+        <div class="am-form-group row">
+            <div class="col-md-4">
+                <label>发布至:</label>
+                <select class="form-control" name="classify">
+                    <option value="{$vo.classify}">--不修改类型--</option>
+                    <option value="1">综合区</option>
+                    <option value="2">品牌活动</option>
+                    <option value="3">公示与通知</option>
+                    <option value="4">招募公告</option>
+                    <option value="5">更多</option>
+                </select>
+                <span class="am-form-caret"></span>
+            </div>
+
+            <div class="col-md-4">
+                <label>作者:</label>
+                <input type="text" class="form-control" name="writer" placeholder="部门 - 负责人/撰稿人" value="{$vo.writer}">
+            </div>
+
+            <div class="col-md-4">
+                <label>修改账号:</label>
+                <input type="text" name="name" value="{$_SESSION['nickname']}"  disabled>
+            </div>
+        </div>
+        <div class="form-group">
+            <script id="container" name="content" type="text/plain">{$vo.content|htmlspecialchars_decode|stripslashes}
+            </script>
+        </div>
+        <div class="form-group" align="right">
+            <button type="submit" name="submit" class="am-btn-primary">发布</button>
+        </div>
+    </form>
+</div>
+
+<js href="__PUBLIC__/js/jquery-2.0.2.js" />
+<js href="__PUBLIC__/ueditor/ueditor.config.js" />
+<js href="__PUBLIC__/ueditor/ueditor.all.min.js" />
+<script>
+    $(function(){
+        var ue = UE.getEditor('container',{
+                    serverUrl :'{:U('Admin/Article/ueditor')}'
+    });
+    })
+</script>
+
+<include file="Public/footer.html" />

@@ -1,0 +1,100 @@
+[ 2016-09-12T13:02:44+08:00 ] 192.168.50.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002759s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001478s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001630s ]
+SQL: SHOW COLUMNS FROM `it_article` [ RunTime:0.0180s ]
+SQL: SELECT * FROM `it_article` ORDER BY create_time desc LIMIT 10   [ RunTime:0.0035s ]
+SQL: SHOW COLUMNS FROM `it_active` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `it_active` ORDER BY id desc LIMIT 4   [ RunTime:0.0098s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000664s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000835s ]
+NOTIC: [8] Undefined index: name /Applications/MAMP/htdocs/xsh/Application/Runtime/Cache/Home/5f5878b563bbd0551b6c84d71156b7e9.php 第 65 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038074s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038185s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000648s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000717s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001125s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001207s ]
+
+[ 2016-09-12T13:57:39+08:00 ] 192.168.50.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002764s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001122s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001216s ]
+SQL: SHOW COLUMNS FROM `it_article` [ RunTime:0.0068s ]
+SQL: SELECT * FROM `it_article` ORDER BY create_time desc LIMIT 10   [ RunTime:0.0049s ]
+SQL: SHOW COLUMNS FROM `it_active` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `it_active` ORDER BY id desc LIMIT 4   [ RunTime:0.0056s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000108s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000191s ]
+NOTIC: [8] Undefined index: name /Applications/MAMP/htdocs/xsh/Application/Runtime/Cache/Home/5f5878b563bbd0551b6c84d71156b7e9.php 第 65 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030954s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031078s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000532s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000618s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001195s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001294s ]
+
+[ 2016-09-12T14:37:30+08:00 ] 192.168.50.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000847s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002202s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002385s ]
+SQL: SHOW COLUMNS FROM `it_article` [ RunTime:0.0068s ]
+SQL: SELECT * FROM `it_article` ORDER BY create_time desc LIMIT 10   [ RunTime:0.0037s ]
+SQL: SHOW COLUMNS FROM `it_active` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `it_active` ORDER BY id desc LIMIT 4   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000156s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000262s ]
+NOTIC: [8] Undefined index: name /Applications/MAMP/htdocs/xsh/Application/Runtime/Cache/Home/5f5878b563bbd0551b6c84d71156b7e9.php 第 65 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025195s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025286s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000357s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000414s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001298s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001508s ]
+
+[ 2016-09-12T15:00:18+08:00 ] 192.168.50.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001258s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001224s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001359s ]
+SQL: SHOW COLUMNS FROM `it_article` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `it_article` ORDER BY create_time desc LIMIT 10   [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `it_active` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `it_active` ORDER BY id desc LIMIT 4   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000109s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000214s ]
+NOTIC: [8] Undefined index: name /Applications/MAMP/htdocs/xsh/Application/Runtime/Cache/Home/5f5878b563bbd0551b6c84d71156b7e9.php 第 65 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027969s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028059s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000440s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000518s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001204s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001334s ]
+

@@ -1,0 +1,129 @@
+<include file="Public/home/header.html" title="文章列表 - 北京师范大学珠海分校信息技术学院学生会"/>
+<include file="Public/home/menu.html" />
+<link href="__PUBLIC__/css/newslist.css" rel="stylesheet">
+<div class="row">
+    <div class="jumbotron">
+        <div class="container">
+            <h1 style="display: inline">新闻动态<small>/Recent News</small></h1>
+        </div>
+
+    </div>
+</div>
+<div class="container">
+    <h3>首页->新闻</h3>
+    <div class="dividing-line"></div>
+    <ul>
+        <li><a href="#">blablablablablablablablablablablablablabla</a><span style="display: block;text-align: right;">2015-01-01</span></li>
+        <div class="artlist"></div>
+        <li><a href="#">blablablablablablablablablablablablablabla</a><span style="display: block;text-align: right;">2015-01-01</span></li>
+        <div class="artlist"></div>
+        <li><a href="#">blablablablablablablablablablablablablabla</a><span style="display: block;text-align: right;">2015-01-01</span></li>
+        <div class="artlist"></div>
+        <li><a href="#">blablablablablablablablablablablablablabla</a><span style="display: block;text-align: right;">2015-01-01</span></li>
+        <div class="artlist"></div>
+        <li><a href="#">blablablablablablablablablablablablablabla</a><span style="display: block;text-align: right;">2015-01-01</span></li>
+        <div class="artlist"></div>
+        <li><a href="#">blablablablablablablablablablablablablabla</a><span style="display: block;text-align: right;">2015-01-01</span></li>
+        <div class="artlist"></div>
+        <li><a href="#">blablablablablablablablablablablablablabla</a><span style="display: block;text-align: right;">2015-01-01</span></li>
+        <div class="artlist"></div>
+        <li><a href="#">blablablablablablablablablablablablablabla</a><span style="display: block;text-align: right;">2015-01-01</span></li>
+        <div class="artlist"></div>
+        <li><a href="#">blablablablablablablablablablablablablabla</a><span style="display: block;text-align: right;">2015-01-01</span></li>
+        <div class="artlist"></div>
+        <li><a href="#">blablablablablablablablablablablablablabla</a><span style="display: block;text-align: right;">2015-01-01</span></li>
+        <div class="artlist"></div>
+    </ul>
+    <div align="center">
+        <nav>
+            <ul class="pagination">
+                <li>
+                    <a href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li>
+                    <a href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+                &nbsp;
+            </ul>
+        </nav>
+    </div>
+
+</div>
+
+
+<div class="container" style="padding-top: 50px; min-height: 500px">
+    <!-- 内容 -->
+    <div class="col-md-9 col-xl-12" style="padding: 0; margin: 0;">
+        <div class="main">
+            <volist name="list" id="vo">
+                <article class="post">
+                    <header class="head">
+                        <a href="__URL__/read/id/{$vo.id}"><h1>{$vo.title}</h1></a>
+                        <p class="date">{$vo.create_time|date='Y-m-d H:i:s',###}</p>
+                    </header>
+
+                    <footer class="foot">
+                        <div class="tags">
+                            <div class="icon">
+                                <span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span>
+                            </div>
+                            <a href="__URL__/classify/id/{$vo.classify}" class="link">
+                                <if condition="$vo.classify eq 1">综合区</if>
+                                <if condition="$vo.classify eq 2">品牌活动</if>
+                                <if condition="$vo.classify eq 3">公示与通知</if>
+                                <if condition="$vo.classify eq 4">招募公告</if>
+                                <if condition="$vo.classify eq 5">更多</if>
+                            </a>
+
+                        </div>
+                    </footer>
+                </article>
+            </volist>
+            <div>{$page}</div>
+        </div>
+    </div>
+
+    <!-- 搜索和导航 -->
+    <div class="col-md-3 hidden-sm hidden-xs" style="margin-right: 0; padding-right: 0;">
+        <div class="sidebar">
+            <!--<div class="search">-->
+            <!--<div class="input-group">-->
+            <!--<input type="text" class="form-control" placeholder="搜索你想要的内容">-->
+            <!--<span class="input-group-btn">-->
+            <!--<button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span> </button>-->
+            <!--</span>-->
+            <!--</div>&lt;!&ndash; /input-group &ndash;&gt;-->
+            <!--</div>-->
+
+            <div class="family"><!-- 分类查找 -->
+                <div class="title">
+                    <span class="glyphicon glyphicon-paperclip"></span>
+                    <span class="text">按分类查找</span>
+                </div>
+                <div class="sort">
+                    <a href="{:U('Article/classify?id=1')}"><p>综合区</p></a>
+                    <a href="{:U('Article/classify?id=2')}"><p>品牌活动</p></a>
+                    <a href="{:U('Article/classify?id=3')}"><p>公示与通知</p></a>
+                    <a href="{:U('Article/classify?id=4')}"><p>招募公告</p></a>
+                    <a href="{:U('Article/classify?id=5')}"><p>更多</p></a>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+</div>
+
+
+<include file="Public/home/footer.html" />
+

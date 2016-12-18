@@ -1,0 +1,27 @@
+<include file="Public/home/header.html" title="文章列表 - 北京师范大学珠海分校信息技术学院学生会"/>
+<include file="Public/home/menu.html" />
+<link href="__PUBLIC__/css/newslist.css" rel="stylesheet">
+<div class="container-fluid">
+<div class="row">
+    <div class="jumbotron">
+        <div class="container">
+            <h1 style="display: inline">新闻动态<small>/Recent News</small></h1>
+        </div>
+
+    </div>
+</div>
+    </div>
+<div class="container">
+    <h3><i class="glyphicon glyphicon-chevron-right"></i> 新闻列表</h3>
+    <div class="dividing-line"></div>
+    <ul class="list-unstyled">
+        <volist name="list" id="vo">
+            <li><a href="__ROOT__/Home/Article/read/id/{$vo.id}">{$vo.title}</a><span style="display: block;text-align: right;">发布时间:{$vo.create_time|date='Y-m-d',###}</span></li>
+            <div class="artlist"></div>
+        </volist>
+    </ul>
+    <div>{$page}</div>
+</div>
+
+<include file="Public/home/footer.html" />
+

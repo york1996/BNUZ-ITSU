@@ -1,0 +1,49 @@
+<include file="Public/home/header.html" title="{$vo.title} - 北京师范大学珠海分校信息技术学院学生会"/>
+<include file="Public/home/menu.html" />
+<div class="am-container">
+    <a href="{:U('Index/Index')}">首页</a> / <a href="__URL__/" class="am-text-primary">投票</a> / <small>{$vo.title}</small>
+    <hr>
+    <article class="am-article">
+        <div class="am-article-hd">
+            <h1 class="am-article-title">{$vo.title}</h1>
+            <p class="am-article-meta">{$vo.time}</p>
+        </div>
+
+        <div class="am-article-bd">
+            {$vo.content|htmlspecialchars_decode|stripslashes}
+        </div>
+        <div>
+            <hr>
+            <h3>投票选项:</h3>
+            <if condition="$vo.state eq 1">
+                <form class="am-form" method="post" action="__URL__/voting">
+                    <volist name="vote" id="voo">
+                        <div class="am-radio">
+                            <label>
+                                <input type="radio" name="vote" value="{$voo.selectname}">
+                                <strong>{$voo.selectname}</strong> <small>得票数:{$voo.countvotes}</small>
+                            </label>
+                        </div>
+                    </volist>
+                    <input type="hidden" name="id" value="{$vo.id}">
+                    <button class="am-btn-primary am-btn-sm" type="post">提交</button>
+                </form>
+                <else />
+            <form class="am-form" method="post" action="__URL__/voting">
+                <volist name="vote" id="voo">
+                    <div class="am-radio">
+                        <label>
+                            <input type="radio" name="vote" value="{$voo.selectname}" disabled>
+                            <strong>{$voo.selectname}</strong> <small>得票数:{$voo.countvotes}</small>
+                        </label>
+                    </div>
+                </volist>
+                <input type="hidden" name="id" value="{$vo.id}">
+                <button class="am-btn-default am-btn-sm" type="post" disabled>停止投票</button>
+            </form>
+                </if>
+        </div>
+    </article>
+</div>
+<br>
+<include file="Public/home/footer.html" />

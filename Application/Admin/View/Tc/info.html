@@ -1,0 +1,35 @@
+<include file="Public/header.html" title="学时管理 - 北京师范大学珠海分校信息技术学院学生会"/>
+<include file="Public/adminmenu.html" />
+<div class="am-cf am-padding">
+    <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">个人学时数据导出</strong> / <small>学时数据导出</small></div>
+</div>
+<div class="am-container">
+    <section class="am-panel am-panel-default">
+        <header class="am-panel-hd">
+            <h3 class="am-panel-title">按学号导出详细数据</h3>
+        </header>
+        <div class="am-panel-bd">
+            <form method="post" class="am-form" action="__URL__/info_export">
+                <div class="am-form-group">
+                    <label for="id">学号(留空默认全体同学)</label>
+                    <input name="id" type="text" class="" id="id" placeholder="输入学号">
+                </div>
+                <div class="am-form-group">
+                    <label for="doc-select-1">选择年份</label>
+                    <select name="time" id="doc-select-1">
+                        <option value="2">全部</option>
+                        <option value="2012">2012年</option>
+                        <option value="2013">2013年</option>
+                        <option value="2014">2014年</option>
+                        <option value="2015">2015年</option>
+                        <option value="2016">2016年</option>
+                    </select>
+                    <span class="am-form-caret"></span>
+                </div>
+                <p><button type="submit" class="am-btn am-btn-default">导出</button></p>
+            </form>
+        </div>
+    </section>
+
+</div>
+<include file="Public/footer.html" />

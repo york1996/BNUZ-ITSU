@@ -1,0 +1,116 @@
+<include file="Public/home/header.html" title="北京师范大学珠海分校信息技术学院学生会"/>
+<include file="Public/home/menu.html" title="北京师范大学珠海分校信息技术学院学生会"/>
+<div class="container-fluid"><!--fluid扩充至全屏-->
+    <div class="row">
+        <div class="jumbotron">
+            <div class="container">
+                <h1 style="display: inline">信息技术学院学生会<small>/ITSU</small></h1>
+            </div>
+
+        </div>
+    </div>
+    <!--<div class="row">&lt;!&ndash;轮播图行&ndash;&gt;-->
+        <!--<div id="inSlider" class="carousel slide carousel-fade" data-ride="carousel" style="margin-top: 0;">-->
+            <!--<ol class="carousel-indicators">-->
+                <!--<li data-target="#inSlider" data-slide-to="0" class="active"></li>-->
+                <!--<li data-target="#inSlider" data-slide-to="1"></li>-->
+            <!--</ol>-->
+
+            <!--<div class="carousel-inner" role="listbox">-->
+                <!--<div class="item active">-->
+                    <!--&lt;!&ndash; Set background for slide in css &ndash;&gt;-->
+                    <!--<div class="header-back one"></div>-->
+                <!--</div>-->
+
+                <!--<div class="item">-->
+                    <!--<div class="container">-->
+                        <!--<div class="carousel-caption blank">-->
+                            <!--<h1>Testing Subject 1 <br> 111111111111111111111<br>111111111111111111111</h1>-->
+                            <!--<p></p>-->
+                            <!--<p><a class="btn btn-lg btn-primary" href="#" role="button">了解更多</a></p>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash; Set background for slide in css &ndash;&gt;-->
+                    <!--<div class="header-back two"></div>-->
+                <!--</div>-->
+                <!--<a class="left carousel-control" href="#inSlider" role="button" data-slide="prev">-->
+                    <!--<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>-->
+                    <!--<span class="sr-only">Previous</span>-->
+                <!--</a>-->
+                <!--<a class="right carousel-control" href="#inSlider" role="button" data-slide="next">-->
+                    <!--<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>-->
+                    <!--<span class="sr-only">Next</span>-->
+                <!--</a>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <!--标准栅格系统,列比例为3-6-3-->
+    <div class="container">
+        <div class="row">
+            <!--总行-->
+            <div class="col-md-3">
+                <!--第一列-->
+
+                    <h3><i class="glyphicon glyphicon-chevron-right"></i> 院会介绍</h3>
+                    <div class="dividing-line"></div>
+                    <p> 北京师范大学珠海分校信息技术学院学生会是在信息技术学院党总支的领导下，唯一代表信息技术学院全体学生共同利益的自治组织。全心全意为学生服务；倡导和组织自我管理、自我教育；发挥作为校、院联系学生的桥梁和纽带作用；在维护全院学生整体利益的同时，表达和维护同学的具体利益。</p>
+
+                    <h3><i class="glyphicon glyphicon-chevron-right"></i> 学生组织</h3>
+                    <div class="dividing-line"></div>
+                    <div align="center">
+                        <a href="#" class="button button-primary button-block">学院党支部</a><br>
+                        <a href="#" class="button button-primary button-block">学院团委</a><br>
+                        <a href="#" class="button button-primary button-block">学院学生社团</a><br>
+                        <a href="#" class="button button-primary button-block">学院球队</a><br>
+                    </div>
+
+            </div>
+
+            <div class="col-md-6">
+                <!--第二列-->
+
+                <h3><i class="glyphicon glyphicon-chevron-right"></i> 新闻动态</h3>
+                <div class="dividing-line"></div>
+                <ul class="list-unstyled">
+                    <volist name="list" id="vo">
+                        <li><a href="__ROOT__/Home/Article/read/id/{$vo.id}">{$vo.title}</a><span style="display: block;text-align: right;">{$vo.create_time|date='Y-m-d',###}</span></li>
+                        <div class="artlist"></div>
+                    </volist>
+
+                </ul>
+                <div align="right">
+                    <a href="__ROOT__/Home/Article/classify">>查看更多</a>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <!--第三列-->
+
+                    <h3><i class="glyphicon glyphicon-chevron-right"></i> 近期活动</h3>
+                    <div class="dividing-line"></div>
+                    <ul class="list-unstyled">
+                        <volist name="list2" id="vo">
+
+                            <li>{$vo.title}<span style="display: block;text-align: right;">截止时间:{$vo.time|date='Y-m-d',###}</span></li>
+                            <div class="artlist"></div>
+                        </volist>
+                    </ul>
+                    <div align="right">
+                        <a href="__ROOT__/Home/Activity/Index">>查看详情</a>
+                    </div>
+
+                    <h3><i class="glyphicon glyphicon-chevron-right"></i> 友情链接</h3>
+                    <div class="dividing-line"></div>
+
+                    <div align="center">
+                        <a href="{:U('Check/index')}" class="button button-primary button-block">科技学时/服务时长</a><br>
+                        <a href="http://tms.bnuz.edu.cn/" target="_blank" class="button button-primary button-block">教学管理系统</a><br>
+                        <a href="http://es.bnuz.edu.cn/" target="_blank" class="button button-primary button-block">教务系统</a><br>
+                        <a href="http://eol.bnuz.edu.cn/" target="_blank" class="button button-primary button-block">网络教学平台</a>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<include file="Public/home/footer.html" />

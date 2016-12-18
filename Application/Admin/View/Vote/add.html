@@ -1,0 +1,46 @@
+<include file="Public/header.html" title="投票管理 - 北京师范大学珠海分校信息技术学院学生会"/>
+<include file="Public/adminmenu.html" />
+<div class="am-cf am-padding">
+    <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">新增投票</strong> / <small>新增投票项目</small></div>
+</div>
+
+<div class="am-container">
+    <form class="am-form" method="post" action="__URL__/add" enctype="multipart/form-data">
+        <div class="am-form-group">
+            <label for="title">标题</label>
+            <div>
+                <input type="text" id="title" name="title" placeholder="标题">
+            </div>
+        </div>
+        <div class="am-form-group">
+            <label for="container">说明</label>
+            <div>
+                <script id="container" name="content" type="text/plain">
+                </script>
+            </div>
+        </div>
+        <div class="am-form-group">
+            <label for="time">时间</label>
+            <div>
+                <input type="text" id="time" name="time" placeholder="时间">
+            </div>
+        </div>
+        <div class="am-form-group">
+            <di>
+                <button type="submit" class="am-btn-default">增加投票类</button>
+            </di>
+        </div>
+    </form>
+</div>
+
+<js href="__PUBLIC__/js/jquery-2.0.2.js" />
+<js href="__PUBLIC__/ueditor/ueditor.config.js" />
+<js href="__PUBLIC__/ueditor/ueditor.all.js" />
+<script>
+    $(function(){
+        var ue = UE.getEditor('container',{
+                    serverUrl :'{:U('Admin/Article/ueditor')}'
+    });
+    })
+</script>
+<include file="Public/footer.html" />

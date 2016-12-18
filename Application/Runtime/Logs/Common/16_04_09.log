@@ -1,0 +1,24 @@
+[ 2016-04-09T16:38:02+08:00 ] 127.0.0.1 /log.html?v=1173821242&c=mango
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002585s ]
+ERR: 无法加载模块:Log
+
+[ 2016-04-09T16:38:19+08:00 ] 127.0.0.1 /log.html?v=1571800372&c=mango
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000623s ]
+ERR: 无法加载模块:Log
+
+[ 2016-04-09T19:37:22+08:00 ] 127.0.0.1 /log.html?v=483240254&c=mango
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001054s ]
+ERR: 无法加载模块:Log
+
+[ 2016-04-09T20:22:04+08:00 ] 127.0.0.1 /log.html?v=3110805638&c=mango
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001161s ]
+ERR: 无法加载模块:Log
+

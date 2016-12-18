@@ -1,0 +1,48 @@
+<include file="Public/home/header.html" title="首次登录"/>
+<include file="Public/home/menu.html" />
+
+<style>
+    .header {
+        text-align: center;
+    }
+    .header h1 {
+        font-size: 200%;
+        color: #333;
+        margin-top: 30px;
+    }
+    .header p {
+        font-size: 14px;
+    }
+</style>
+<div class="header">
+    <div class="am-g">
+        <h1>首次登陆登记</h1>
+        <p>信院学生会网站新用户首次登陆登记<br/>请使用教务系统的账号信息绑定以验证是否为本校学生<br />验证时会稍微比较慢,请勿刷新</p>
+    </div>
+    <hr />
+</div>
+<div class="am-g">
+    <div class="am-u-lg-6 am-u-md-8 am-u-sm-centered">
+        <h3>首次登陆</h3>
+        <hr>
+        <form method="post" class="am-form" action="{:U('Jw/bd','','')}">
+            <label for="name">真实姓名:</label>
+            <input type="text" name="name" id="name">
+            <br>
+            <label for="major">专业:</label>
+            <input type="text" name="major" id="major">
+            <br>
+            <label for="email">学号:</label>
+            <input type="text" name="username" id="email">
+            <br>
+            <label for="password">教务系统密码:</label>
+            <input type="password" name="password" id="password">
+            <br>
+            <br />
+            <div class="am-cf">
+                <input type="submit" name="" value="登 记" class="am-btn am-btn-primary am-btn-sm am-fl">
+            </div>
+        </form>
+    </div>
+</div>
+<include file="Public/home/footer.html" />

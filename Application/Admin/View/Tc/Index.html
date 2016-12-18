@@ -1,0 +1,78 @@
+<include file="Public/header.html" title="学时管理 - 北京师范大学珠海分校信息技术学院学生会"/>
+<include file="Public/adminmenu.html" />
+<div class="am-cf am-padding">
+    <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">导入学时</strong> / <small>在这里可以导入学时</small></div>
+</div>
+<div class="am-container">
+<div class="am-panel am-panel-default">
+    <div class="am-panel-hd">数据导出Excel</div>
+    <div class="am-panel-bd">
+        <form action="{:U('Tc/excel_runexport')}" method="post" enctype="multipart/form-data">
+            <div class="am-form-group">
+                <div class="am-form-group">
+                    <label for="doc-select-1">选择要导出的数据</label>
+                    <select name="id" id="doc-select-1">
+                        <option value="12">12级</option>
+                        <option value="13">13级</option>
+                        <option value="14">14级</option>
+                        <option value="15">15级</option>
+                        <option value="1">所有</option>
+                    </select>
+                    <span class="am-form-caret"></span>
+                </div>
+            </div>
+            <div class="am-form-group">
+                <button type="submit" class="am-btn am-btn-default am-btn-sm">
+                    提交
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+
+<div class="am-container">
+    <a href="__URL__/add" type="button" class="am-btn am-btn-default"><span class="am-icon-plus"></span> 新增</a>
+    <table class="table table-hover table-striped">
+        <thead>
+        <tr>
+            <th width="40%">项目</th>
+            <th>时间</th>
+            <th>管理</th>
+        </tr>
+        </thead>
+        <tbody>
+        <volist name="list" id="vo">
+            <tr>
+                <td width="40%">{$vo.title}</td>
+                <td>
+                    {$vo.time}
+                </td>
+                <td><a href="__URL__/addtc/id/{$vo.id}" type="button" class="am-btn am-btn-xs am-btn-default"><span class="am-icon-pencil-square-o"></span> 导入学时</a>
+                    <a href="__URL__/del/id/{$vo.id}" type="button" class="am-btn am-btn-xs am-btn-default"><span class="am-icon-trash-o"></span> 删除</a>
+                </td>
+            </tr>
+        </volist>
+        </tbody>
+    </table>
+    <div>
+            {$page}
+    </div>
+</div>
+
+<!--<div class="am-panel am-panel-default">-->
+    <!--<div class="am-panel-hd">Excel备份导入</div>-->
+    <!--<div class="am-panel-bd">-->
+        <!--<form action="{:U('Tc/excel_runimport1')}" method="post" enctype="multipart/form-data">-->
+            <!--<div class="am-form-group">-->
+                <!--<input type="file" name="file_stu" id="file_stu"  class="file" multiple="multiple"  />-->
+            <!--</div>-->
+            <!--<div class="am-form-group">-->
+                <!--<button type="submit" class="am-btn am-btn-default am-btn-sm">-->
+                    <!--提交-->
+                <!--</button>-->
+            <!--</div>-->
+        <!--</form>-->
+    <!--</div>-->
+<!--</div>-->
+<include file="Public/footer.html" />

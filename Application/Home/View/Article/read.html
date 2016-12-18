@@ -1,0 +1,181 @@
+<include file="Public/home/header.html" title="{$vo.title} - 北京师范大学珠海分校信息技术学院学生会"/>
+<style type="text/css">
+
+    body{
+        background: #dbdbdb;
+    }
+
+    a{
+        text-decoration: none !important;
+    }
+    .main{
+        margin: 20px 0 0 0;
+        position: relative;
+        width: 100%;
+        float: left;
+    }
+
+    .post{
+        margin-bottom: 50px;
+        width: 100%;
+    }
+
+    .post .head{
+        background-color: #FFFFFF;
+        margin-top: 20px;
+        /*height: 5.9em;*/
+        display: table;
+        border-bottom: 1px solid #dbdbdb;
+        width: 100% !important;
+    }
+
+    .post .head h1{
+        font-size: 28px;
+        line-height: 32px;
+        padding: 20px 20px 10px 20px;
+        margin-top: 0;
+        font-weight: 300;
+        border-left: 5px solid #06213f;
+    }
+
+    .post .head a{
+        color: #292929;
+        transition: all 0.2s ease-in 0s;
+        -webkit-transition: all 0.2s ease-in 0s;
+        -moz-transition: all 0.2s ease-in 0s;
+    }
+
+    .post .head h1:hover{
+        color: #06213f;
+    }
+
+    .post .head p{
+        display: block;
+        line-height: 14px;
+        color: #817c7c;
+        float: right;
+        margin-right: 15px;
+    }
+
+    .post .summary{
+        padding: 24px 40px;
+        background-color: #FFFFFF;
+        border-bottom: 1px solid #dbdbdb;
+    }
+
+    .post .summary p{
+        font-size: 16px;
+        font-weight: 400;
+        color: #292929;
+        margin-bottom: 8px;
+    }
+
+
+    .post .summary .view-all{
+        margin: 30px 0 -5px 5px;
+    }
+
+    .post .summary .view-all span{
+        color: #06213f;
+        font-size: 14px;
+        padding: 7px;
+        background-color: #f5f5f5;
+        border-Radius: 5px;
+    }
+
+    .post .summary .view-all span:hover{
+        background-color: #06213f;
+        color: #FFFFFF;
+    }
+
+    .post .summary img{
+        display:block;
+        margin-left:auto;
+        margin-right:auto;
+        padding: 20px;
+    }
+
+    .post .foot{
+        background-color: #FFFFFF;
+        height: 3.5em;
+        display: block;
+        border-bottom: 1px solid #dbdbdb;
+        padding: 1em 24px 1em 24px;
+    }
+
+    .post .foot span{
+        color: #817c7c;
+        margin: 0 2px 0 0;
+    }
+
+    .post .foot p{
+        color: #292929;
+        font-size: 16px;
+    }
+
+    .post .foot .tags{
+        display: block;
+        position: relative;
+        height: 1em;
+        color: #817c7c;
+    }
+
+    .post .foot .tags .link{
+        position: relative;
+        z-index: 2;
+        float: left;
+        margin-top: -1px;
+        margin-left: 5px;
+        color: #817c7c;
+        transition: all 0.2s ease-in 0s;
+        -webkit-transition: all 0.2s ease-in 0s;
+        -moz-transition: all 0.2s ease-in 0s;
+    }
+
+    .post .foot .tags .icon{
+        z-index: 1;
+        float: left;
+    }
+
+    .post .foot .link:hover{
+        color: #06213f;
+    }
+
+
+</style>
+<include file="Public/home/menu.html" />
+
+<div class="container">
+    <div class="main">
+        <article class="post">
+            <header class="head">
+                <h1>{$vo.title}</h1>
+                <p><a href="__URL__/classify">返回新闻列表</a></p>
+                <p class="author">作者 {$vo.writer}</p>
+                <p class="date">发表于  {$vo.create_time|date='Y-m-d H:i:s',###}</p>
+            </header>
+
+            <div class="summary">
+                {$vo.content|htmlspecialchars_decode|stripslashes}
+            </div>
+
+            <footer class="foot">
+                <div class="tags">
+                    <a href="__URL__/classify/id/{$vo.classify}" class="link" style="float: right !important;"><if condition="$vo.classify eq 1">综合区</if>
+                        <if condition="$vo.classify eq 2">品牌活动</if>
+                        <if condition="$vo.classify eq 3">公示与通知</if>
+                        <if condition="$vo.classify eq 4">招募公告</if>
+                        <if condition="$vo.classify eq 5">更多</if></a>
+                    <div class="icon" style="float: right !important;">
+                        <span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span>
+                    </div>
+
+                </div>
+
+
+            </footer>
+
+        </article>
+    </div>
+</div>
+<include file="Public/home/footer.html" />

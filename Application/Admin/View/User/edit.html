@@ -1,0 +1,40 @@
+<include file="Public/header.html" title="学生管理 - 北京师范大学珠海分校信息技术学院学生会"/>
+<include file="Public/adminmenu.html" />
+<div class="am-cf am-padding">
+    <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">编辑学生账号信息</strong> / <small>在这里可以编辑学生信息</small></div>
+</div>
+
+<div class="am-container">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">修改学生</h3>
+        </div>
+        <div class="panel-body">
+            <div class="am-container">
+                <form class="am-form-inline" method="post" action="__URL__/update"  enctype="multipart/form-data">
+                    <div class="am-form-group">
+                        <label for="id">学号</label>
+                        <input type="text" class="form-control" id="id" placeholder="学号" name="id" value="{$vo.id}">
+                    </div>
+                    <div class="am-form-group">
+                        <label for="name">姓名</label>
+                        <input type="text" class="form-control" id="name" placeholder="姓名" name="name" value="{$vo.name}" >
+                    </div>
+                    <div class="am-form-group">
+                        <label for="password">密码</label>
+                        <input type="password" class="form-control" id="password" placeholder="密码" name="password">
+                    </div>
+                    <div class="am-form-group">
+                        <label for="major">专业</label>
+                        <input type="text" class="form-control" id="major" placeholder="专业" name="major" value="{$vo.major}">
+                    </div>
+                    <br>
+                    <br>
+                    <button type="submit" class="btn btn-default">修改</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<include file="Public/footer.html" />
